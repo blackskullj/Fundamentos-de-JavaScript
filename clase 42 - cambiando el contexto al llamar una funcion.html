@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Clase 41 - Estructuras de Datos Inmutables</title>
+  </head>
+  <body>
+    <script>
+      const jonathan = {
+        nombre: "Jonathan",
+        apellido: "Nuñez"
+      };
+
+      function saludar(saludo = "Hola") {
+        console.log(` ${saludo} , mi nombre es ${this.nombre} `);
+      }
+
+      //   const saludarAJonathan = saludar.bind(jonathan);
+
+      //   setTimeout(saludar.bind(jonathan, "Hola, che"), 1000);
+
+      //   saludar.call(jonathan, 'Hola che');
+
+      saludar.apply(jonathan, ["Hola che"]);
+    </script>
+  </body>
+</html>
